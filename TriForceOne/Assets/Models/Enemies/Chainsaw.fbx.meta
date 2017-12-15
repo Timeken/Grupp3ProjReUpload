@@ -1,0 +1,306 @@
+fileFormatVersion: 2
+guid: 6c6b5619e07745a4bb8e04e1234fbfaf
+timeCreated: 1480590722
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Arm
+    100002: Arm_Moveable
+    100004: Arm_Pullable
+    100006: Body_Moveable
+    100008: //RootNode
+    100010: Chainsaw
+    100012: Chainsaw_Moveable
+    100014: DONT_MOVE
+    100016: DONT_MOVE 1
+    100018: DONT_MOVE 2
+    100020: DONT_MOVE 3
+    100022: DONT_MOVE 4
+    100024: Elbow_Moveable
+    100026: Head_Moveable
+    100028: Helmet
+    100030: Helmet_Pullable
+    100032: Hips_Moveable
+    100034: Knee_Moveable
+    100036: Knee_Moveable 1
+    100038: Left_Leg
+    100040: Left_Leg_Moveable
+    100042: Left_Leg_Pullable
+    100044: Right_Leg
+    100046: Right_Leg_Moveable
+    100048: Right_Leg_Pullable
+    100050: Steel
+    100052: TV
+    400000: Arm
+    400002: Arm_Moveable
+    400004: Arm_Pullable
+    400006: Body_Moveable
+    400008: Chainsaw
+    400010: //RootNode
+    400012: Chainsaw_Moveable
+    400014: DONT_MOVE
+    400016: DONT_MOVE 1
+    400018: DONT_MOVE 2
+    400020: DONT_MOVE 3
+    400022: DONT_MOVE 4
+    400024: Elbow_Moveable
+    400026: Head_Moveable
+    400028: Helmet
+    400030: Helmet_Pullable
+    400032: Hips_Moveable
+    400034: Knee_Moveable
+    400036: Knee_Moveable 1
+    400038: Left_Leg
+    400040: Left_Leg_Moveable
+    400042: Left_Leg_Pullable
+    400044: Right_Leg
+    400046: Right_Leg_Moveable
+    400048: Right_Leg_Pullable
+    400050: Steel
+    400052: TV
+    4300000: Steel
+    4300002: Helmet
+    4300004: Left_Leg
+    4300006: Right_Leg
+    4300008: Arm
+    4300010: Chainsaw
+    4300012: TV
+    7400000: Chainsaw_Walk
+    7400002: Chainsaw_Death
+    9500000: //RootNode
+    13700000: Arm
+    13700002: Chainsaw
+    13700004: Helmet
+    13700006: Left_Leg
+    13700008: Right_Leg
+    13700010: Steel
+    13700012: TV
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Chainsaw_Walk
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arm
+        weight: 1
+      - path: Arm_Moveable
+        weight: 1
+      - path: Arm_Moveable/Elbow_Moveable
+        weight: 1
+      - path: Arm_Moveable/Elbow_Moveable/DONT_MOVE 2
+        weight: 1
+      - path: Arm_Pullable
+        weight: 1
+      - path: Body_Moveable
+        weight: 1
+      - path: Chainsaw
+        weight: 1
+      - path: Chainsaw_Moveable
+        weight: 1
+      - path: Chainsaw_Moveable/DONT_MOVE
+        weight: 1
+      - path: Head_Moveable
+        weight: 1
+      - path: Head_Moveable/DONT_MOVE 1
+        weight: 1
+      - path: Helmet
+        weight: 1
+      - path: Helmet_Pullable
+        weight: 1
+      - path: Hips_Moveable
+        weight: 1
+      - path: Left_Leg
+        weight: 1
+      - path: Left_Leg_Moveable
+        weight: 1
+      - path: Left_Leg_Moveable/Knee_Moveable
+        weight: 1
+      - path: Left_Leg_Moveable/Knee_Moveable/DONT_MOVE 3
+        weight: 1
+      - path: Left_Leg_Pullable
+        weight: 1
+      - path: Right_Leg
+        weight: 1
+      - path: Right_Leg_Moveable
+        weight: 1
+      - path: Right_Leg_Moveable/Knee_Moveable 1
+        weight: 1
+      - path: Right_Leg_Moveable/Knee_Moveable 1/DONT_MOVE 4
+        weight: 1
+      - path: Right_Leg_Pullable
+        weight: 1
+      - path: Steel
+        weight: 1
+      - path: TV
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Chainsaw_Death
+      takeName: Take 001
+      firstFrame: 70
+      lastFrame: 110
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arm
+        weight: 1
+      - path: Arm_Moveable
+        weight: 1
+      - path: Arm_Moveable/Elbow_Moveable
+        weight: 1
+      - path: Arm_Moveable/Elbow_Moveable/DONT_MOVE 2
+        weight: 1
+      - path: Arm_Pullable
+        weight: 1
+      - path: Body_Moveable
+        weight: 1
+      - path: Chainsaw
+        weight: 1
+      - path: Chainsaw_Moveable
+        weight: 1
+      - path: Chainsaw_Moveable/DONT_MOVE
+        weight: 1
+      - path: Head_Moveable
+        weight: 1
+      - path: Head_Moveable/DONT_MOVE 1
+        weight: 1
+      - path: Helmet
+        weight: 1
+      - path: Helmet_Pullable
+        weight: 1
+      - path: Hips_Moveable
+        weight: 1
+      - path: Left_Leg
+        weight: 1
+      - path: Left_Leg_Moveable
+        weight: 1
+      - path: Left_Leg_Moveable/Knee_Moveable
+        weight: 1
+      - path: Left_Leg_Moveable/Knee_Moveable/DONT_MOVE 3
+        weight: 1
+      - path: Left_Leg_Pullable
+        weight: 1
+      - path: Right_Leg
+        weight: 1
+      - path: Right_Leg_Moveable
+        weight: 1
+      - path: Right_Leg_Moveable/Knee_Moveable 1
+        weight: 1
+      - path: Right_Leg_Moveable/Knee_Moveable 1/DONT_MOVE 4
+        weight: 1
+      - path: Right_Leg_Pullable
+        weight: 1
+      - path: Steel
+        weight: 1
+      - path: TV
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
