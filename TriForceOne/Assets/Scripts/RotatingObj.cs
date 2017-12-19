@@ -6,7 +6,7 @@ public class RotatingObj : MonoBehaviour {
 
     private Transform from;
     private bool rotating;
-    private float speed = 1;
+    private float speed = 5;
     private float rotAmount = 0;
     private Quaternion fianlRotation;
 
@@ -17,11 +17,32 @@ public class RotatingObj : MonoBehaviour {
 
     public void Rotation()
     {
-        //from = gameObject.transform;
         rotAmount += 90;       
         print(rotAmount);
-        transform.Rotate(0, rotAmount, 0);
-        //fianlRotation = Quaternion.Euler(0,rotAmount, 0);
+        if (rotAmount == 90)
+        {
+            fianlRotation = Quaternion.Euler(0, 90, 0);
+            print("turn 1");
+        }
+        else if (rotAmount == 180)
+        {
+            fianlRotation = Quaternion.Euler(0, 0, 0);
+            transform.Rotate(0, 90, 0);
+            print("turn 2");
+        }
+        else if (rotAmount == 270)
+        {
+            fianlRotation = Quaternion.Euler(0, -90, 0);
+            print("turn 3");
+        }
+        else if (rotAmount == 360)
+        {
+            fianlRotation = Quaternion.Euler(0, 0, 0);
+            transform.Rotate(0, 90, 0);
+            print("turn 4");
+            rotAmount = 0;
+        }
+
         rotating = !rotating;
     }
 
@@ -29,8 +50,7 @@ public class RotatingObj : MonoBehaviour {
     {
         if (rotating)
         {
-            //transform.Rotate(0, rotAmount, 0);
-            //transform.rotation = Quaternion.Lerp(transform.rotation, fianlRotation, Time.deltaTime * speed);
+            transform.rotation = Quaternion.Lerp(fianlRotation, fianlRotation, Time.deltaTime * speed);
         }
     }
 }
