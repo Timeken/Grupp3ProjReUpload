@@ -106,10 +106,6 @@ public class SpawnManager : MonoBehaviour
         {
             if (currentWave < waves.GetLength(0))
             {
-                if (GameObject.FindObjectOfType<RotatingObj>() != null)
-                {
-                    GameObject.FindObjectOfType<RotatingObj>().Rotation();
-                }
                 if (currentElement + 1 < waves[currentWave].wave.GetLength(0))
                 {
                     currentElement++;
@@ -158,6 +154,10 @@ public class SpawnManager : MonoBehaviour
                 if (GameObject.FindObjectOfType<AnimationStop>() != null)
                 {
                     GameObject.FindObjectOfType<AnimationStop>().StartAni();
+                }
+                if (GameObject.FindObjectOfType<RotatingObj>() != null)
+                {
+                    GameObject.FindObjectOfType<RotatingObj>().Rotation();
                 }
                 StartCoroutine("WaitForWave");
             }
