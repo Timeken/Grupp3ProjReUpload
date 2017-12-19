@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-using UnityEngine.AI;
 using System.Collections.Generic;
 
 public class SpawnManager : MonoBehaviour
@@ -90,10 +89,8 @@ public class SpawnManager : MonoBehaviour
                 if (spawnPos[i] != null)
                 {
                     enemyManager.AddEnemy(Instantiate(g, spawnPos[i].transform.position, Quaternion.identity) as GameObject);
-                    g.transform.position = spawnPos[i].transform.position;
-                    g.GetComponent<NavMeshAgent>().Warp(spawnPos[i].transform.position);                    
                 }
-            }           
+            }
         }
         yield return new WaitForSeconds(curSe.delay);
         NextSpawn();

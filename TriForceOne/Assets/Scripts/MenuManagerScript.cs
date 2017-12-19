@@ -120,7 +120,7 @@ public class MenuManagerScript : MonoBehaviour
 
 	public void Retry()
 	{
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+		SceneManager.LoadScene("GameScene");
 	}
 
     public void NextLevel()
