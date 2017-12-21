@@ -152,23 +152,20 @@ public class SpawnManager : MonoBehaviour
                     tower.GetComponent<CombatTower>().AmmoRestock();
                 }
             }
-            if (currentWave < waves.Length && enemyCount < 0)
-            {
-                if (GameObject.FindObjectOfType<AnimationStop>() != null)
-                {
-                    GameObject.FindObjectOfType<AnimationStop>().StartAni();
-                }
-                if (GameObject.FindObjectOfType<RotatingObj>() != null)
-                {
-                    GameObject.FindObjectOfType<RotatingObj>().Rotation();
-                }
-                StartCoroutine("WaitForWave");
-            }
-            else
+            if (thisWave >= waves.Length)
             {
                 victoryScreen.SetActive(true);
                 Time.timeScale = 0;
             }
+            if (GameObject.FindObjectOfType<AnimationStop>() != null)
+            {
+                GameObject.FindObjectOfType<AnimationStop>().StartAni();
+            }
+            if (GameObject.FindObjectOfType<RotatingObj>() != null)
+            {
+                GameObject.FindObjectOfType<RotatingObj>().Rotation();
+            }
+            StartCoroutine("WaitForWave");
         }
     }
 
