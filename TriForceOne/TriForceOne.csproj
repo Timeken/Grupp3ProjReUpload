@@ -243,6 +243,7 @@
     <Compile Include="Assets\Scripts\Managers\ScoreManager.cs" />
     <Compile Include="Assets\Scripts\Managers\ScrapManager.cs" />
     <Compile Include="Assets\Scripts\Managers\SpawnManager.cs" />
+    <Compile Include="Assets\Scripts\Menu\GraphicSettings.cs" />
     <Compile Include="Assets\Scripts\Menu\MainMenuMurderer.cs" />
     <Compile Include="Assets\Scripts\Menu\MainMenuSpawner.cs" />
     <Compile Include="Assets\Scripts\Menu\MenuManagerScript.cs" />
