@@ -257,7 +257,6 @@
     <Compile Include="Assets\Scripts\Towers\TowerScript.cs" />
     <Compile Include="Assets\Scripts\Towers\TowerUpgrade.cs" />
     <Compile Include="Assets\Scripts\Towers\TurretTower.cs" />
-    <Compile Include="Assets\SnowPack\Script\SnowMaterialReplacement.cs" />
     <Compile Include="Assets\unitu ui samples\Scripts\ActiveStateToggler.cs" />
     <Compile Include="Assets\unitu ui samples\Scripts\ApplicationManager.cs" />
     <Compile Include="Assets\unitu ui samples\Scripts\ChangeColor.cs" />
@@ -271,7 +270,6 @@
     <Compile Include="Assets\unitu ui samples\Scripts\TiltWindow.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\SnowPack\Shader\SnowShader.shader" />
     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
