@@ -143,7 +143,7 @@ public class SpawnManager : MonoBehaviour
     {
         enemyCount--;
         if (enemyCount <= 0)
-        {
+        {          
             GameObject[] towers = GameObject.FindGameObjectsWithTag("Tower");
             foreach (GameObject tower in towers)
             {
@@ -152,7 +152,8 @@ public class SpawnManager : MonoBehaviour
                     tower.GetComponent<CombatTower>().AmmoRestock();
                 }
             }
-            if (thisWave >= waves.Length)
+
+            if (thisWave >= waves.Length-1)
             {
                 victoryScreen.SetActive(true);
                 Time.timeScale = 0;
