@@ -152,7 +152,7 @@ public class SpawnManager : MonoBehaviour
                     tower.GetComponent<CombatTower>().AmmoRestock();
                 }
             }
-            if (thisWave >= waves.Length)
+            if (thisWave >= waves.Length-1)
             {
                 victoryScreen.SetActive(true);
                 Time.timeScale = 0;
