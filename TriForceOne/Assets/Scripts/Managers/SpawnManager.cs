@@ -52,6 +52,10 @@ public class SpawnManager : MonoBehaviour
         {
             enemyCount += waves[thisWave].wave[i].count;
         }
+        if (spawnPos.Length > 1)
+        {
+            enemyCount *= spawnPos.Length;
+        }
         StartCoroutine("SpawnWait");
     }
 
@@ -72,7 +76,6 @@ public class SpawnManager : MonoBehaviour
             StartCoroutine("SpawnEnemy");
 			waiting = false;
         }
-        print(enemyCount);
     }
 
     IEnumerator SpawnEnemy()
