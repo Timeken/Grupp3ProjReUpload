@@ -20,7 +20,7 @@ public class SpawnManager : MonoBehaviour
     public float firstWaveTimer;
     public float laterWaveTimer;
     bool waiting;
-    static int enemyCount;
+    public int enemyCount;
     static int thisWave;
 
     SpawnElement curSe;
@@ -72,6 +72,7 @@ public class SpawnManager : MonoBehaviour
             StartCoroutine("SpawnEnemy");
 			waiting = false;
         }
+        print(enemyCount);
     }
 
     IEnumerator SpawnEnemy()
@@ -177,16 +178,28 @@ public class SpawnManager : MonoBehaviour
 
     IEnumerator WaitForWave()
     {
-		timer = maxTimer;
-        thisWave++;
-        for (int i = 0; i < waves[thisWave].wave.Length; i++)
+		
+        try
         {
-            enemyCount += waves[thisWave].wave[i].count;
-			timer += (int)waves[thisWave].wave[i].delay * (int)waves[thisWave].wave[i].count;
+            timer = maxTimer;
+            thisWave++;
+            for (int i = 0; i < waves[thisWave].wave.Length; i++)
+            {
+                enemyCount += waves[thisWave].wave[i].count;
+                timer += (int)waves[thisWave].wave[i].delay * (int)waves[thisWave].wave[i].count;
+            }
+            if (spawnPos.Length > 1)
+            {
+                enemyCount *= spawnPos.Length;
+            }
+            waveText.text = "Wave: " + (thisWave + 1).ToString();
+            GameObject.Find("WaveSound").GetComponent<AudioSource>().Play();
         }
-        yield return new WaitForSeconds(timeBetweenWaves);
-        waveText.text = "Wave: " + (thisWave + 1).ToString();
-        GameObject.Find("WaveSound").GetComponent<AudioSource>().Play();
+        catch
+        {
+
+        }
+        yield return new WaitForSeconds(timeBetweenWaves);              
         yield return new WaitForSeconds(1f);
         waiting = false;
         StartCoroutine("SpawnEnemy");
