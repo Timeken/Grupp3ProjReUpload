@@ -153,7 +153,7 @@ public class SpawnManager : MonoBehaviour
                 }
             }
 
-            if (thisWave >= waves.Length-1)
+            if (thisWave >= waves.Length)
             {
                 victoryScreen.SetActive(true);
                 Time.timeScale = 0;
@@ -177,16 +177,28 @@ public class SpawnManager : MonoBehaviour
 
     IEnumerator WaitForWave()
     {
-		timer = maxTimer;
-        thisWave++;
-        for (int i = 0; i < waves[thisWave].wave.Length; i++)
+		
+        try
         {
-            enemyCount += waves[thisWave].wave[i].count;
-			timer += (int)waves[thisWave].wave[i].delay * (int)waves[thisWave].wave[i].count;
+            timer = maxTimer;
+            thisWave++;
+            for (int i = 0; i < waves[thisWave].wave.Length; i++)
+            {
+                enemyCount += waves[thisWave].wave[i].count;
+                timer += (int)waves[thisWave].wave[i].delay * (int)waves[thisWave].wave[i].count;
+            }
+            if (spawnPos.Length != 0)
+            {
+                enemyCount *= spawnPos.Length;
+            }
+            waveText.text = "Wave: " + (thisWave + 1).ToString();
+            GameObject.Find("WaveSound").GetComponent<AudioSource>().Play();
         }
-        yield return new WaitForSeconds(timeBetweenWaves);
-        waveText.text = "Wave: " + (thisWave + 1).ToString();
-        GameObject.Find("WaveSound").GetComponent<AudioSource>().Play();
+        catch
+        {
+
+        }
+        yield return new WaitForSeconds(timeBetweenWaves);              
         yield return new WaitForSeconds(1f);
         waiting = false;
         StartCoroutine("SpawnEnemy");
