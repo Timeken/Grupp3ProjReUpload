@@ -20,7 +20,7 @@ public class SpawnManager : MonoBehaviour
     public float firstWaveTimer;
     public float laterWaveTimer;
     bool waiting;
-    static int enemyCount;
+    public int enemyCount;
     static int thisWave;
 
     SpawnElement curSe;
@@ -72,6 +72,7 @@ public class SpawnManager : MonoBehaviour
             StartCoroutine("SpawnEnemy");
 			waiting = false;
         }
+        print(enemyCount);
     }
 
     IEnumerator SpawnEnemy()
@@ -153,7 +154,7 @@ public class SpawnManager : MonoBehaviour
                 }
             }
 
-            if (thisWave >= waves.Length)
+            if (thisWave >= waves.Length-1)
             {
                 victoryScreen.SetActive(true);
                 Time.timeScale = 0;
@@ -187,7 +188,7 @@ public class SpawnManager : MonoBehaviour
                 enemyCount += waves[thisWave].wave[i].count;
                 timer += (int)waves[thisWave].wave[i].delay * (int)waves[thisWave].wave[i].count;
             }
-            if (spawnPos.Length != 0)
+            if (spawnPos.Length > 1)
             {
                 enemyCount *= spawnPos.Length;
             }

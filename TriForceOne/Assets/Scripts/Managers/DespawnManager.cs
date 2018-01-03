@@ -5,6 +5,7 @@ using System.Collections;
 public class DespawnManager : MonoBehaviour
 {
     GameObject gm;
+    SpawnManager spawnManager;
 
     void Start()
     {
@@ -20,6 +21,10 @@ public class DespawnManager : MonoBehaviour
 			gm.GetComponent<GameOverManager>().LoseLife();
             gm.GetComponent<SpawnManager>().EnemyDead();
             GameObject.Find("EnemyGotThroughSound").GetComponent<AudioSource>().Play();
-		}
+
+            spawnManager = GetComponent<SpawnManager>();
+            spawnManager.enemyCount--;
+
+        }
 	}
 }
