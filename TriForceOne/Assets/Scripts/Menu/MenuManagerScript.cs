@@ -53,6 +53,11 @@ public class MenuManagerScript : MonoBehaviour
 		}
 	}
 
+	public void StartGame()
+	{
+		SceneManager.LoadScene("GameScene");
+	}
+
     public void EnableLevelSelect()
     {
         MainMenu.SetActive(false);
